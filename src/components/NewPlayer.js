@@ -4,6 +4,8 @@ import axios from 'axios';
 
 const NewPlayer = ({players,setPlayers,setMainOpacity,setDisplayNewPlayer}) => {
 
+    const url = 'https://api-for-react-project.herokuapp.com/api'
+    //const url = 'http://localhost:8080/api'
     const [firstname,setFirstname] = useState('');
     const [lastname,setLastname] = useState('');
     const [birthday,setBirthday] = useState('');
@@ -16,7 +18,7 @@ const NewPlayer = ({players,setPlayers,setMainOpacity,setDisplayNewPlayer}) => {
   
     const handleSubmit = (e) =>{
         const newPlayer = { firstname:firstname, lastname:lastname, birthday:birthday,number:number,  position:position, appearances:appearances,goals:goals, background:background, image:image };
-            axios.post('http://localhost:8080/api/players/new',newPlayer).then((res)=>{
+            axios.post(`${url}/player/new`,newPlayer).then((res)=>{
                 const allPlayers = {...players,newPlayer};
                 setPlayers(allPlayers);
                 setFirstname('');

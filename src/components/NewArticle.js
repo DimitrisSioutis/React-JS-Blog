@@ -11,6 +11,7 @@ const NewArticle = ({articles,setArticles,setDisplayNewArticle,setMainOpacity}) 
   
     const postNewArticle = (e) =>{
         const url = 'https://api-for-react-project.herokuapp.com/api'
+        //const url = 'http://localhost:8080/api'
         const newArticle = { title: title , description: description, markdown: markdown, image: image };
        
         axios.post(`${url}/articles/new`,newArticle).then((res)=>{

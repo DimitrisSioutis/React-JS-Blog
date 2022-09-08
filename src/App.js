@@ -20,8 +20,8 @@ import Search from "./components/Search";
 const App = () => {
   
   axios.defaults.withCredentials = true;
-  //const url = 'https://api-for-react-project.herokuapp.com/api'
-  const url = 'http://localhost:8080/api'
+  const url = 'https://api-for-react-project.herokuapp.com/api'
+  //const url = 'http://localhost:8080/api'
 
   const [players,setPlayers] = useState([])
   const [articles,setArticles] = useState([])

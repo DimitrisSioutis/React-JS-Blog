@@ -4,6 +4,8 @@ import '../styles/EditArticle.css'
 
 export default function EditArticle({article,setDisplayEdit,articles,setArticles}) {
     
+    const url = 'https://api-for-react-project.herokuapp.com/api'
+    //const url = 'http://localhost:8080/api'
     const [title,setTitle] = useState(article.title);
     const [description,setDescription] = useState(article.description);
     const [markdown,setMarkdown] = useState(article.markdown);
@@ -12,7 +14,7 @@ export default function EditArticle({article,setDisplayEdit,articles,setArticles
     const editArticle = (e) =>{
         
         const newArticle = { title: title , description: description, markdown: markdown, image: image };
-        axios.put(`http://localhost:8080/api/articles/edit/${article._id}`,newArticle) .then((res)=>{
+        axios.put(`${url}/articles/edit/${article._id}`,newArticle) .then((res)=>{
             const allArticles = {...articles,newArticle};
             setArticles(allArticles);
         })
