@@ -1,5 +1,4 @@
-const express = require("express");
-const nodemon = require("nodemon");
+/*const express = require("express");
 const app = express();
 
 const path = require("path");
@@ -13,4 +12,4 @@ if (process.env.NODE_ENV !== "production") {
 
 
 
-app.listen( process.env.PORT || 3000)
+app.listen( process.env.PORT || 3000)*/
