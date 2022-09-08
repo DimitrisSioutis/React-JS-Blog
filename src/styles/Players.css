@@ -1,13 +1,8 @@
 
-.player-containers {
-    display: flex;
-    flex-direction: row;
-    width: 100vw;
-}
-
 .row{
     background-color: white;
-    height: 60vh;
+    width: 90%;
+    margin-left: 5%;
 }
 
 .row h3{
@@ -17,8 +12,12 @@
     justify-content: center;
     font-size: x-large;
     color: #1A2434;
+    padding-bottom: 20px;
 }
 
+.row{
+    padding-bottom: 20px;
+}
 .players{
     display: flex;
     justify-content: space-around;
@@ -27,7 +26,7 @@
 .player{
     display:block;
     position: relative;
-    height: 50vh;
+    height: 470px;
     width: 25%;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -39,7 +38,7 @@
 }
 
 .info {
-    padding-top: 40vh;
+    padding-top: 380px;
     text-align: center;
     color: white;
     z-index: 9;

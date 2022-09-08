@@ -3,7 +3,7 @@ import React from 'react'
 import Article from '../components/Article'
 import Carousel from '../components/Carousel'
 
-const Home = ({articles}) => {
+const Home = ({articles , displayEditArticle}) => {
 
    return(
       <>   
@@ -16,8 +16,8 @@ const Home = ({articles}) => {
             </div>
             <div className="articles-container">
                 <div className="articles"> 
-                    {articles.slice(0, 4).map(article=>(
-                        <Article key={article.id} article={article}/>
+                    {articles.slice(3, 6).map(article=>(
+                        <Article key={article.id} article={article} displayEditArticle={displayEditArticle}/>
                     ))}
                 </div>
             </div>

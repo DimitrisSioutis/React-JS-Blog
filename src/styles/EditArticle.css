@@ -1,0 +1,56 @@
+.edit-fields{
+    position: absolute;
+    margin-left: 20px;
+    width: 45vw;
+    height: 300px;
+    position: relative;
+    background-color: white;    
+    -webkit-box-shadow: 0px 6px 5px 2px #221c352c; 
+    box-shadow: 0px 6px 5px 2px #221c352c;
+}
+
+
+.edit-container{
+    display: flex;
+}
+.edit-labels , .edit-inputs{
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    
+}
+
+.edit-labels {
+    
+    width: 25%;
+    align-items: flex-end;
+    margin-right: 20px;
+}
+
+.edit-inputs{
+    width: 75%;
+}
+
+.edit-inputs input{
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 2px;
+    color: black;
+    width: 500px;
+}
+
+.edit-inputs textarea {
+    width: 500px;
+    height: 75px;
+    color: black;
+}
+
+.edit-inputs input , .edit-inputs textarea {
+    margin-top: 10px;
+} 
+
+.edit-options {
+    display: flex;
+    margin-left: 35%;
+}
+

@@ -20,7 +20,7 @@ export default function Player({player,key}){
           <div className="hidden-stats">
             <div className="inline2">
               <div className="stat-title">Ημ/νία Γέννησης</div>
-              <div>{player.birthday}</div>
+              <div>{new Date(player.birthday).toLocaleDateString()}</div>
             </div>
             <div className="inline2">
               <div className="stat-title">Συμμετοχές</div>

@@ -1,20 +1,25 @@
-.form-wrapper {
-    position: relative;
-    top: 10vh;
-    background-color: white;
-    margin-left: auto;
-    margin-right: auto;
-    width: 40%;
+.player-fields-container {
+    position: absolute;
+    top: 180px;
+    width: 100%;
+    height: 800px;
+    z-index: 10;
 }
 
+.player-fields-container form{
+    display: flex;
+    justify-content: center;
+    
+}
 .player-container {
     padding-top: 3vh;
     display: flex;
-    width: 100%;
+    width: 700px; 
+    background-color: white;  
 }
 
 .flex-labels {
-    flex: 0.85;
+    flex: 1;
 
 }
 
@@ -38,7 +43,7 @@
     padding: 4px;
 }
 
-.input input{
+.input input {
     font-size: 13px;
     padding: 20px;
     width: 50%;
@@ -48,31 +53,29 @@
     color: rgb(75, 75, 75);
 }
 
+.select-position{
+    width: 49%;
+    font-size: 13px;
+    height: 41px;
+    border-radius: 5px;
+    margin-left: 4px;
+    color: rgb(75, 75, 75);
+    padding-left: 20px;
+    border: 1px solid #931d37;
+}
+
+.player-fields-options-wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
 .player-fields-options{
     display: flex;
-    margin-left: 12vw;
-    margin-top: 2vh;
-    padding-bottom: 2vh;
-}
-
-.player-fields-options .cancel{
-    width: 8vw;
-    background-color: rgb(255, 60, 60);
-    text-align: center;
-    height: 4vh;
-    display: flex;
+    width: 700px;
+    background-color: white;
     justify-content: center;
-    align-items: center;
-    margin-right: 20px;
-    color: white;
-    font-size: 2vh;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
-.player-fields-options button{
-    background-color: rgb(65, 150, 65);
-    color: white;
-    width: 8vw;
-    height: 4vh;
-    font-size: 2vh;
-}
 

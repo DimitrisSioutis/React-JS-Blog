@@ -6,15 +6,12 @@ const Team = ({players}) => {
 
     return(
       <>      
-      <h4 className="page-title">Πρώτη Ομάδα</h4>
-
-        <div className='players-container'>
-
+      <h1 className="page-title">Πρώτη Ομάδα</h1>
           <div className="row ">
 
             <h3>Τερματοφύλακες</h3>
             <div className="players">
-              {players.filter(player => player.position ==='Goalkeeper').map(player =>
+              {players.filter(player => player.position ==='goalkeeper').map(player =>
                   <Player key={player.id} player={player} />
               )}
             </div>
@@ -26,7 +23,7 @@ const Team = ({players}) => {
 
             <h3>Αμυντικοί</h3>
             <div className="players">
-              {players.filter(player => player.position ==='Defender').map(player =>
+              {players.filter(player => player.position ==='defender').map(player =>
                   <Player key={player.id} player={player} />
               )}
             </div>
@@ -37,7 +34,7 @@ const Team = ({players}) => {
             
             <h3>Μέσοι</h3>
             <div className="players">
-              {players.filter(player => player.position ==='Midfielder').map(player =>
+              {players.filter(player => player.position ==='midfielder').map(player =>
                 <Player key={player.id} player={player} />
               )}
               </div>
@@ -48,13 +45,12 @@ const Team = ({players}) => {
             
             <h3>Επιθετικοί</h3>
             <div className="players">
-              {players.filter(player => player.position ==='Forward').map(player =>
+              {players.filter(player => player.position ==='forward').map(player =>
                   <Player key={player.id} player={player} />
               )}
             </div>
           
           </div>
-        </div>
       </>
     )
 }

@@ -1,6 +1,5 @@
-import { Link, useLocation, useNavigate } from "react-router-dom"
+import { Link, useLocation} from "react-router-dom"
 import React, {useEffect} from "react"
-import axios from "axios"
 import Moment from "moment"
 import '../styles/ShowArticle.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -11,7 +10,6 @@ import logo from '../logo.png'
 export default function Article({success,articles}){
 
     const location = useLocation()
-    const navigate = useNavigate()
 
     useEffect(() => {
       window.scrollTo({top: 0});
@@ -19,10 +17,7 @@ export default function Article({success,articles}){
   
     const { article } = location.state       /* with the use of the useLocation hook we have access to the article */
 
-    const sendDeleteRequest = (e)=>{
-        axios.delete(`http://localhost:8080/api/articles/delete/${article._id}`).then(navigate('/'))
-        e.preventDefault()
-    }
+
     return (
         <div className="page-wrapper">
             <div className="outside" style={{background: `url(${article.image}) no-repeat center fixed`}}>
@@ -30,15 +25,7 @@ export default function Article({success,articles}){
                     <div className="show-article-container" id="show-article-container">
                         <h1 className="show-article-title">{article.title}</h1>
                         <div className="show-article-date"><IconClock style={{height:'1.2vh'}}/>{Moment(article.createdAt).format('MMMM Do YYYY')}</div>
-                        <div className='show-article-markdown'>{article.markdown}</div>
-                            {success &&
-                                <div className="opt">      
-                                    <Link className="edit-article" to={`/articles/edit`} key={article.id} state= {{ article: article}}  style={{ textDecoration: "none"}}>Edit</Link>
-                                    <form method="POST">
-                                        <button type="submit" className="delete-article" onClick={sendDeleteRequest}>Delete</button>
-                                    </form>
-                                </div>
-                            }                 
+                        <div className='show-article-markdown'>{article.markdown}</div>         
                     </div>
                     <div className="share-article">
                         <span>Μοιράσου το :</span>

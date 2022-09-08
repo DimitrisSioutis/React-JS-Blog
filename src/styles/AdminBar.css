@@ -8,7 +8,7 @@
     width:100%;
     z-index: 11;
     color: white;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .admin{
@@ -25,18 +25,31 @@
 
 .admin .icon{
     height: 20px;
+    padding-right: 10px;
 }
 
-.icon-link{
-    color: white;
-    opacity: 0.5;
+#add-article , #add-player{
+    cursor: pointer;
+    background: none;
+    width: 60px;
+    text-decoration: underline;
+
 }
-.link{
+
+.icon-link,.link, #add-article , #add-player{
     color: white;
-    opacity: 0.5;
-    text-decoration: none;
-    padding-right: 1vw;
+    opacity: 0.8;
+    padding-right: 10px;
 }
+
+.link:hover .icon-link:hover ,.link:hover, #add-article:hover , #add-player:hover{
+    opacity: 1;
+}
+
+.link:hover .icon-link{
+    opacity: 1;
+}
+
 .admin.logout{
     text-decoration: none;
     cursor: pointer;

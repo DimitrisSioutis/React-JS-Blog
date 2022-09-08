@@ -5,57 +5,140 @@
     src: local('Zona Pro Thin'), url('/public/ZonaPro-Thin.woff') format('woff');
 }
 
-.login-wrapper{
+.body {
+    height: 100vh;
+    background: linear-gradient(
+      0deg,
+      rgba(147, 29, 55, 1) 0%,
+      rgba(26, 36, 52, 1) 75%
+    );
+}
+
+.bg-img {
+    display: flex;
+    justify-content: center;
     width: 100%;
-    display: flex;
-    justify-content: center;
 }
 
-.login-form{
-    height: 30vh;
-    width: 30%;
-    background-color: white;
-    display: flex;
-    justify-content: center;
+.bg-img img {
+    opacity: 0.5;
+    position: absolute;
+    width: 768px;
+    z-index: 0.1;
 }
 
-.login-form .fields{
+.login-form-container {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 90vh;
+}
+
+.login-form {
+    font-family: "Zona Pro";
+    height: 400px;
+    width: 500px;
+    border-radius: 5px;
+    background-color: rgba(250, 250, 250, 0.95);
+    -webkit-box-shadow: 0px 0px 25px 2px #04002a;
+    box-shadow: 0px 0px 25px 2px #04002a;
+}
+
+.login-form h1 {
+    width: 100%;
+    height: 75px;
+    color: #1a2434;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form .login-form-fields {
     display: flex;
     flex-direction: column;
 }
 
-.login-form .username, .password{
+.login-form-fields .username,
+.password {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #1A2434;
+    color: #1a2434;
     width: 100%;
     height: 6vh;
     font-size: 2vh;
 }
 
-.login-form #username,#password{
-    margin-left: 1vw;
-    font-size: 2vh;
-    font-family: 'Zona Pro Thin';
-    color: #1a2434dc
+.login-form-fields label {
+    font-size: 20px;
+    font-style: bold;
 }
 
-.login-form .submit{
+.login-form-fields input {
+    margin-left: 10px;
+    font-size: 15px;
+    height: 30px;
+    border-radius: 5px;
+    color: #1a2434dc;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    -webkit-box-shadow: 0px 0px 20px -4px #6c6c6c;
+    box-shadow: 0px 0px 20px -4px #6c6c6c;
+    z-index: 2;
+}
+
+.login-form-fields input:focus {
+    -webkit-box-shadow: 0px 0px 2px 1px rgba(147, 29, 55, 0.6);
+    box-shadow: 0px 0px 2px 1px rgba(147, 29, 55, 0.6);
+}
+
+::placeholder {
+    position: relative;
+    left: 5px;
+}
+
+.login-form-fields .submit {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 5vh;
 }
 
-.login-form #login{
-    color:white;
-    font-size: 2vh;
-    height: 5vh;
-    background-color: #1A2434;
-    width: 10vw;
+.login-form #login {
+    color: white;
+    font-size: 15px;
+    height: 30px;
+    width: 100px;
+    background-color: #d14f51;
+    -webkit-box-shadow: 0px 0px 20px -4px #6c6c6c;
+    box-shadow: 0px 0px 20px -10px #6c6c6c;
 }
 
-.login-form #login:hover{
+.login-form #login:hover {
     cursor: pointer;
+}
+
+.login-form-fields span {
+    opacity: 0;
+    position: relative;
+    font-size: 10px;
+    left: 44%;
+    top: 0;
+    color: red;
+}
+
+.uname-border {
+    position: absolute;
+    bottom: 59.6%;
+    left: 49.4%;
+    width: 150px;
+    border-radius: 5px;
+    height: 31px;
+    opacity: 0;
+    z-index: 0.5;
 }

@@ -1,6 +1,7 @@
 import React,{useEffect} from 'react';
 import axios from 'axios';
 import { Link, useLocation,useNavigate} from "react-router-dom"
+import Moment from 'moment';
 import '../styles/ShowPlayer.css'
 
 const ShowPlayer = ({success}) => {
@@ -52,7 +53,7 @@ const ShowPlayer = ({success}) => {
               </div>
               <div className="values">
                 <p>{player.position} </p>
-                <p>{player.birthday} </p>
+                <p>{Moment(player.birthday).format('MMMM Do YYYY')} </p>
                 <p>{player.appearances} </p>
                 <p>{player.goals} </p>
               </div>
