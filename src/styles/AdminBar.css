@@ -1,0 +1,43 @@
+.admin-bar{
+    height: 30px;
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgb(53, 52, 58);
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    width:100%;
+    z-index: 11;
+    color: white;
+    font-size: 14px;
+}
+
+.admin{
+    width: 40vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.admin span{
+    padding-right: 1vw;
+}
+
+.admin .icon{
+    height: 20px;
+}
+
+.icon-link{
+    color: white;
+    opacity: 0.5;
+}
+.link{
+    color: white;
+    opacity: 0.5;
+    text-decoration: none;
+    padding-right: 1vw;
+}
+.admin.logout{
+    text-decoration: none;
+    cursor: pointer;
+}

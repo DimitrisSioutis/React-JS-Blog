@@ -1,0 +1,125 @@
+
+.player-containers {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+}
+
+.row{
+    background-color: white;
+    height: 60vh;
+}
+
+.row h3{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: x-large;
+    color: #1A2434;
+}
+
+.players{
+    display: flex;
+    justify-content: space-around;
+}
+
+.player{
+    display:block;
+    position: relative;
+    height: 50vh;
+    width: 25%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    -webkit-box-shadow: inset 0px -150px 120px -15px #1A2434;
+    box-shadow: inset 0px -150px 120px -15px #1A2434;
+}
+
+.info {
+    padding-top: 40vh;
+    text-align: center;
+    color: white;
+    z-index: 9;
+}
+
+.inline1 {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 5px;
+    font-size: 1.7vw;
+}
+
+.hidden-stats{
+    display: none;
+    opacity: 0;
+    justify-content: center;
+    padding-top: 2vh;
+}
+
+.inline2{
+    width: 7vw;
+    border-top: 1px solid rgba(255, 255, 255, 0.308);
+    display: inline-block;
+    vertical-align: middle;
+    padding-top: 2vh;
+}
+
+.stat-title{
+    font-size: 0.5vw;
+    padding-bottom: 0.5vh;
+}
+.position{
+    font-size: 0.8vw;
+}
+
+#number, #lastname {
+    font-family: 'Zona Pro Bold';
+}
+
+#firstname {
+    font-family: 'Zona Pro Thin';
+    font-weight: bold;
+}
+
+.lastname-background {
+    position: absolute;
+    padding-top: 34vh;
+    width: 100%;
+}
+
+.lastname-background p {
+    font-size: 4vw;
+    font-style: italic;
+    letter-spacing: 2px;
+    text-align: center;
+    color: transparent;
+    background-image: linear-gradient(0deg,rgba(255, 255, 255, 0),rgba(255, 255, 255));
+    background-clip: text;
+    opacity: 0.8;
+    
+}
+
+/* Mouse over and mouse out events */
+
+.player:hover{
+    cursor: pointer;
+}
+.player:hover .lastname-background{
+    padding-top: 26vh;
+    transition: 0.4s ease;
+}
+
+.player:hover .info{
+    padding-top: 30vh;
+    transition: 0.4s ease;
+}
+
+.player:hover .hidden-stats{
+    opacity: 1;
+    display: block;
+    transition: 0.4s ease;
+}
+

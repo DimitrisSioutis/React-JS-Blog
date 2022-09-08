@@ -1,0 +1,78 @@
+.form-wrapper {
+    position: relative;
+    top: 10vh;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+.player-container {
+    padding-top: 3vh;
+    display: flex;
+    width: 100%;
+}
+
+.flex-labels {
+    flex: 0.85;
+
+}
+
+.flex-inputs {
+    flex: 1.5;
+}
+
+.label {
+    text-align: right;
+    width: 100%;
+    padding-right: 20px;        
+    font-size: 14px;
+    line-height: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    color: #1a2434;
+}
+
+.input {
+    width: 100%;
+    padding: 4px;
+}
+
+.input input{
+    font-size: 13px;
+    padding: 20px;
+    width: 50%;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #931d37;
+    color: rgb(75, 75, 75);
+}
+
+.player-fields-options{
+    display: flex;
+    margin-left: 12vw;
+    margin-top: 2vh;
+    padding-bottom: 2vh;
+}
+
+.player-fields-options .cancel{
+    width: 8vw;
+    background-color: rgb(255, 60, 60);
+    text-align: center;
+    height: 4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    color: white;
+    font-size: 2vh;
+}
+
+.player-fields-options button{
+    background-color: rgb(65, 150, 65);
+    color: white;
+    width: 8vw;
+    height: 4vh;
+    font-size: 2vh;
+}
+
