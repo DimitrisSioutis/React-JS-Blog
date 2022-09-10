@@ -51,7 +51,7 @@ export default function Player({player,success,setPlayers,players}){
             <button className="edit-article" onClick={(e)=>{setDisplayEditPlayer('block'); e.preventDefault()}}>Edit</button>
             <button className="delete-article" onClick={handleDelete} >Delete</button>
             <div className='hidden-div' style={{display: displayEditPlayer}}>
-                <EditPlayer player={player} players={players} setPlayers={setPlayers} setDisplayEditPlayer={setDisplayEditPlayer}/>
+                <EditPlayer player={player} setDisplayEditPlayer={setDisplayEditPlayer}/>
             </div> 
           </div>
         </>}

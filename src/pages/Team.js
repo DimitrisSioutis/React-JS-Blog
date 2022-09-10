@@ -15,7 +15,7 @@ const Team = ({players,success,setPlayers}) => {
               <h3>{position.h1}</h3>
               <div className="players">
                 {players.filter(player => player.position === position.name).map(player =>
-                    <Player success={success} player={player} players={players} setPlayers={setPlayers} />
+                    <Player success={success} player={player} />
                 )}
               </div>
             </div>
