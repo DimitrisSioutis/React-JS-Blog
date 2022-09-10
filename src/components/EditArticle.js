@@ -13,15 +13,15 @@ export default function EditArticle({article,setDisplayEdit,articles,setArticles
     const [image,setImage] = useState(article.image);
 
     const editArticle = (e) =>{
-        
+        e.preventDefault();
+
         const newArticle = { title: title , description: description, markdown: markdown, image: image };
         axios.put(`${url}/articles/edit/${article._id}`,newArticle) .then((res)=>{
             const allArticles = {...articles,newArticle};
             setArticles(allArticles);
         })
         
-        setDisplayEdit('none'); 
-        e.preventDefault();
+        setDisplayEdit('none');    
     }
 
   return (

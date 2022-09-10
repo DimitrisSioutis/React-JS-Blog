@@ -5,7 +5,7 @@ import Moment from 'moment'
 import { IconArrowRight} from '@tabler/icons';
 import EditArticle from '../components/EditArticle'
 
-export default function Article({article,success,setArticles}) {
+export default function Article({article,success}) {
 
     const url = 'http://localhost:8080/api' ;
     //const url = 'https://api-for-react-project.herokuapp.com/api'
@@ -45,7 +45,7 @@ export default function Article({article,success,setArticles}) {
         {success &&
         <>  
             <div className='hidden-div' style={{display: displayEditArticle}}>
-                <EditArticle article={article} setArticles={setArticles} setDisplayEdit={setDisplayEdit}/>
+                <EditArticle article={article} setDisplayEdit={setDisplayEdit}/>
             </div>
         </>}
     </>

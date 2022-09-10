@@ -33,7 +33,7 @@ export default function News({articles,success,setArticles}){
                                 <div className="article-list">                          {/* we slice the date of each article and the we compare it with the date we iterating*/}
                                     {articles.map((article) => {                        {/* so the output will be the articles listed together based on the day they were published*/}
                                         if(article.createdAt.slice(0,10) === date){  
-                                            return(<Article article = {article} success={success} articles={articles} setArticles={setArticles}/>)   
+                                            return(<Article article = {article} success={success} />)   
                                         }       
                                     })}
                                 </div>                                                  
