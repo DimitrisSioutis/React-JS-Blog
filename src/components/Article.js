@@ -1,4 +1,4 @@
-import React, { useEffect, useState} from 'react'
+import React, { useState} from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import Moment from 'moment'
@@ -7,8 +7,11 @@ import EditArticle from '../components/EditArticle'
 
 export default function Article({article,success,setArticles}) {
 
+    const url = 'http://localhost:8080/api' ;
+    //const url = 'https://api-for-react-project.herokuapp.com/api'
+    
     const handleDelete = (e)=>{
-        axios.delete(`http://localhost:8080/api/articles/delete/${article._id}`)
+        axios.delete(`${url}/articles/delete/${article._id}`)
         e.preventDefault()
     }
 

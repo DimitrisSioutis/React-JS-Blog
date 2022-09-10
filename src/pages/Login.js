@@ -5,8 +5,8 @@ import '../styles/Login.css'
 
 export default function Login({success,setSuccess,users}){
     
-    const url = 'https://api-for-react-project.herokuapp.com/api'
-    //const url = 'http://localhost:8080/api'
+    //const url = 'https://api-for-react-project.herokuapp.com/api'
+    const url = 'http://localhost:8080/api'
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");   
     

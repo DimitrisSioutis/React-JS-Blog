@@ -20,8 +20,8 @@ import Search from "./components/Search";
 const App = () => {
   
   axios.defaults.withCredentials = true;
-  const url = 'https://api-for-react-project.herokuapp.com/api'
-  //const url = 'http://localhost:8080/api'
+  //const url = 'https://api-for-react-project.herokuapp.com/api'
+  const url = 'http://localhost:8080/api'
 
   const [players,setPlayers] = useState([])
   const [articles,setArticles] = useState([])
@@ -80,7 +80,7 @@ const App = () => {
           <Route path="/" element={<Home articles={articles}/>} />
           <Route path="/history" element={<History />} />
           <Route path="/news" element={<News articles={articles} success={success} setArticles={setArticles} />} />
-          <Route path="/team" element={<Team players={players} />} />
+          <Route path="/team" element={<Team players={players} success={success} setPlayers={setPlayers}/>} />
           <Route path="/contactus" element={<ContactUs />} />
           <Route path="/blog/:slug" element={<ShowArticle articles={articles} />} />
           <Route path="/team/:slug" element={<ShowPlayer players={players} />} />

@@ -2,55 +2,26 @@ import '../styles/Players.css'
 import Player from '../components/Player'
 import React from 'react'
 
-const Team = ({players}) => {
+const Team = ({players,success,setPlayers}) => {
+
+  const positions = [{h1:'Τερματοφύλακες',name:'goalkeeper'},{h1:'Αμυντικοί',name:'defender'},{h1:'Μέσοι',name:'midfielder'},{h1:'Επιθετικοί', name:'forward'}]
 
     return(
       <>      
       <h1 className="page-title">Πρώτη Ομάδα</h1>
-          <div className="row ">
-
-            <h3>Τερματοφύλακες</h3>
-            <div className="players">
-              {players.filter(player => player.position ==='goalkeeper').map(player =>
-                  <Player key={player.id} player={player} />
-              )}
-            </div>
-
-          </div>
-
-
-          <div className="row">
-
-            <h3>Αμυντικοί</h3>
-            <div className="players">
-              {players.filter(player => player.position ==='defender').map(player =>
-                  <Player key={player.id} player={player} />
-              )}
-            </div>
-
-          </div>
-          
-          <div className="row">
-            
-            <h3>Μέσοι</h3>
-            <div className="players">
-              {players.filter(player => player.position ==='midfielder').map(player =>
-                <Player key={player.id} player={player} />
-              )}
+          {positions.map((position)=>{
+            return (
+              <div className="row ">
+              <h3>{position.h1}</h3>
+              <div className="players">
+                {players.filter(player => player.position === position.name).map(player =>
+                    <Player success={success} player={player} players={players} setPlayers={setPlayers} />
+                )}
               </div>
-
-          </div>
-          
-          <div className="row">
-            
-            <h3>Επιθετικοί</h3>
-            <div className="players">
-              {players.filter(player => player.position ==='forward').map(player =>
-                  <Player key={player.id} player={player} />
-              )}
             </div>
-          
-          </div>
+            )
+          })}
+
       </>
     )
 }

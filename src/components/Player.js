@@ -1,10 +1,22 @@
-import React from 'react'
+import React,{useState} from 'react'
 import {Link} from 'react-router-dom'
+import EditPlayer from './EditPlayer'
+import axios from 'axios'
 
-export default function Player({player,key}){
+export default function Player({player,success,setPlayers,players}){
+
+  const [displayEditPlayer,setDisplayEditPlayer] = useState('none')
+
+  const url = 'http://localhost:8080/api' ;
+  //const url = 'https://api-for-react-project.herokuapp.com/api'
+  
+  const handleDelete = (e)=>{
+      axios.delete(`${url}/players/delete/${player._id}`)
+      e.preventDefault()
+  }
 
   return(
-    
+
       <div className="player" style={{ backgroundImage: `url("${player.image}")` }}>
         <Link to={`/team/${player.slug}`} state={{player:player}} style={{textDecoration:'none'}}>
         <div className="lastname-background" >
@@ -33,8 +45,17 @@ export default function Player({player,key}){
           </div>
         </div>
         </Link>
+        {success &&
+        <>
+          <div className="admin-options">
+            <button className="edit-article" onClick={(e)=>{setDisplayEditPlayer('block'); e.preventDefault()}}>Edit</button>
+            <button className="delete-article" onClick={handleDelete} >Delete</button>
+            <div className='hidden-div' style={{display: displayEditPlayer}}>
+                <EditPlayer player={player} players={players} setPlayers={setPlayers} setDisplayEditPlayer={setDisplayEditPlayer}/>
+            </div> 
+          </div>
+        </>}
+        
       </div>
-    
-
   )
 }

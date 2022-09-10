@@ -2,7 +2,7 @@ import React from "react"
 import Article from "../components/Article"
 import '../styles/Articles.css'
 
-export default function News({articles,success,setArticles,displayEditArticle,setDisplayEdit}){
+export default function News({articles,success,setArticles}){
 
 
     const dates = []

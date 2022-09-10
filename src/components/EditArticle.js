@@ -4,8 +4,9 @@ import '../styles/EditArticle.css'
 
 export default function EditArticle({article,setDisplayEdit,articles,setArticles}) {
     
-    const url = 'https://api-for-react-project.herokuapp.com/api'
-    //const url = 'http://localhost:8080/api'
+    //const url = 'https://api-for-react-project.herokuapp.com/api'
+    const url = 'http://localhost:8080/api'
+
     const [title,setTitle] = useState(article.title);
     const [description,setDescription] = useState(article.description);
     const [markdown,setMarkdown] = useState(article.markdown);
@@ -18,11 +19,13 @@ export default function EditArticle({article,setDisplayEdit,articles,setArticles
             const allArticles = {...articles,newArticle};
             setArticles(allArticles);
         })
-        e.preventDefault()
+        
         setDisplayEdit('none'); 
+        e.preventDefault();
     }
 
   return (
+    <>
     <form onSubmit={editArticle} className="edit-fields">
         <div className="edit-container">  
             <div className='edit-labels'>
@@ -39,15 +42,15 @@ export default function EditArticle({article,setDisplayEdit,articles,setArticles
             </div>
         </div>            
         <div className="edit-options">
-                <div className="cancel">
-                    <a onClick={ (e)=>{setDisplayEdit('none'); e.preventDefault();}}>Cancel</a>
-                </div>
-                <div className="save">
-                    <button type="submit">Save</button>
-                </div>
+            <div className="cancel">
+                <a onClick={ (e)=>{setDisplayEdit('none'); e.preventDefault();}}>Cancel</a>
             </div>
+            <div className="save">
+                <button type="submit">Save</button>
+            </div>
+        </div>
     </form>
-    
+    </>
   )
 }
 

@@ -1,0 +1,41 @@
+.player-edit-container {
+    position: absolute;
+    top: 40px;
+    right: -80px;
+    width: 600px;
+    height: 600px;
+    z-index: 10;
+    border: 2px solid black;
+}
+
+.player-edit-container form{
+    display: flex;
+    justify-content: center;
+    
+}
+.player-container {
+    padding-top: 3vh;
+    display: flex;
+    width: 700px; 
+    background-color: white; 
+}
+
+.flex-labels {
+    flex: 1;
+
+}
+
+.flex-inputs {
+    flex: 1.5;
+}
+
+.label {
+    text-align: right;
+    width: 100%;
+    padding-right: 20px;        
+    font-size: 14px;
+    line-height: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    color: #1a2434;
+}
