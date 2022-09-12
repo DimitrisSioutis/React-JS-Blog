@@ -7,7 +7,8 @@ import NewArticle from './NewArticle';
 import NewPlayer from './NewPlayer';
 
 const AdminBar = ({setSuccess,setMainOpacity}) => {
-  const url = 'https://api-for-react-project.herokuapp.com/api'
+  //const url = 'https://api-for-react-project.herokuapp.com/api'
+  const url = 'http://localhost:8080/api'
   const [displayNewArticle,setDisplayNewArticle] = useState('0');
   const [displayNewPlayer,setDisplayNewPlayer] = useState('0');
 
